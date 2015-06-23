@@ -45,7 +45,7 @@
     }
     
     self.scrollView.contentSize = (CGSize){xPosition, self.scrollView.frame.size.width};
-   // [super viewDidAppear:YES];
+    [super viewDidAppear:YES];
 
 }
 
@@ -55,5 +55,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
 
 @end

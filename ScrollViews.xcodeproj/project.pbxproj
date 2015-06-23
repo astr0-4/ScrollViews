@@ -17,6 +17,7 @@
 		FAAC4F301B39A1DB00D0A968 /* Lighthouse-in-Field.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FAAC4F271B39A1DB00D0A968 /* Lighthouse-in-Field.jpg */; };
 		FAAC4F321B39A1DB00D0A968 /* Lighthouse-night.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FAAC4F2A1B39A1DB00D0A968 /* Lighthouse-night.jpg */; };
 		FAAC4F341B39A1DB00D0A968 /* Lighthouse.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FAAC4F2D1B39A1DB00D0A968 /* Lighthouse.jpg */; };
+		FAAC4F371B39C88100D0A968 /* ViewControllerZoom.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAC4F361B39C88100D0A968 /* ViewControllerZoom.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,8 @@
 		FAAC4F271B39A1DB00D0A968 /* Lighthouse-in-Field.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Lighthouse-in-Field.jpg"; path = "Lighthouse-in-Field.imageset/Lighthouse-in-Field.jpg"; sourceTree = "<group>"; };
 		FAAC4F2A1B39A1DB00D0A968 /* Lighthouse-night.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Lighthouse-night.jpg"; path = "Lighthouse-night.imageset/Lighthouse-night.jpg"; sourceTree = "<group>"; };
 		FAAC4F2D1B39A1DB00D0A968 /* Lighthouse.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Lighthouse.jpg; path = "Lighthouse-zoomed.imageset/Lighthouse.jpg"; sourceTree = "<group>"; };
+		FAAC4F351B39C88100D0A968 /* ViewControllerZoom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerZoom.h; sourceTree = "<group>"; };
+		FAAC4F361B39C88100D0A968 /* ViewControllerZoom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerZoom.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +94,8 @@
 				FAAC4F021B399D6A00D0A968 /* AppDelegate.m */,
 				FAAC4F041B399D6A00D0A968 /* ViewController.h */,
 				FAAC4F051B399D6A00D0A968 /* ViewController.m */,
+				FAAC4F351B39C88100D0A968 /* ViewControllerZoom.h */,
+				FAAC4F361B39C88100D0A968 /* ViewControllerZoom.m */,
 				FAAC4F071B399D6A00D0A968 /* Main.storyboard */,
 				FAAC4F0A1B399D6A00D0A968 /* Images.xcassets */,
 				FAAC4F271B39A1DB00D0A968 /* Lighthouse-in-Field.jpg */,
@@ -234,6 +239,7 @@
 				FAAC4F061B399D6A00D0A968 /* ViewController.m in Sources */,
 				FAAC4F031B399D6A00D0A968 /* AppDelegate.m in Sources */,
 				FAAC4F001B399D6A00D0A968 /* main.m in Sources */,
+				FAAC4F371B39C88100D0A968 /* ViewControllerZoom.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
