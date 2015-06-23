@@ -14,6 +14,9 @@
 		FAAC4F0B1B399D6A00D0A968 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAAC4F0A1B399D6A00D0A968 /* Images.xcassets */; };
 		FAAC4F0E1B399D6A00D0A968 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAAC4F0C1B399D6A00D0A968 /* LaunchScreen.xib */; };
 		FAAC4F1A1B399D6A00D0A968 /* ScrollViewsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAC4F191B399D6A00D0A968 /* ScrollViewsTests.m */; };
+		FAAC4F301B39A1DB00D0A968 /* Lighthouse-in-Field.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FAAC4F271B39A1DB00D0A968 /* Lighthouse-in-Field.jpg */; };
+		FAAC4F321B39A1DB00D0A968 /* Lighthouse-night.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FAAC4F2A1B39A1DB00D0A968 /* Lighthouse-night.jpg */; };
+		FAAC4F341B39A1DB00D0A968 /* Lighthouse.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FAAC4F2D1B39A1DB00D0A968 /* Lighthouse.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,9 @@
 		FAAC4F131B399D6A00D0A968 /* ScrollViewsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScrollViewsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAAC4F181B399D6A00D0A968 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAAC4F191B399D6A00D0A968 /* ScrollViewsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScrollViewsTests.m; sourceTree = "<group>"; };
+		FAAC4F271B39A1DB00D0A968 /* Lighthouse-in-Field.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Lighthouse-in-Field.jpg"; path = "Lighthouse-in-Field.imageset/Lighthouse-in-Field.jpg"; sourceTree = "<group>"; };
+		FAAC4F2A1B39A1DB00D0A968 /* Lighthouse-night.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Lighthouse-night.jpg"; path = "Lighthouse-night.imageset/Lighthouse-night.jpg"; sourceTree = "<group>"; };
+		FAAC4F2D1B39A1DB00D0A968 /* Lighthouse.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Lighthouse.jpg; path = "Lighthouse-zoomed.imageset/Lighthouse.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +93,9 @@
 				FAAC4F051B399D6A00D0A968 /* ViewController.m */,
 				FAAC4F071B399D6A00D0A968 /* Main.storyboard */,
 				FAAC4F0A1B399D6A00D0A968 /* Images.xcassets */,
+				FAAC4F271B39A1DB00D0A968 /* Lighthouse-in-Field.jpg */,
+				FAAC4F2A1B39A1DB00D0A968 /* Lighthouse-night.jpg */,
+				FAAC4F2D1B39A1DB00D0A968 /* Lighthouse.jpg */,
 				FAAC4F0C1B399D6A00D0A968 /* LaunchScreen.xib */,
 				FAAC4EFD1B399D6A00D0A968 /* Supporting Files */,
 			);
@@ -199,9 +208,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAAC4F341B39A1DB00D0A968 /* Lighthouse.jpg in Resources */,
 				FAAC4F091B399D6A00D0A968 /* Main.storyboard in Resources */,
 				FAAC4F0E1B399D6A00D0A968 /* LaunchScreen.xib in Resources */,
+				FAAC4F301B39A1DB00D0A968 /* Lighthouse-in-Field.jpg in Resources */,
 				FAAC4F0B1B399D6A00D0A968 /* Images.xcassets in Resources */,
+				FAAC4F321B39A1DB00D0A968 /* Lighthouse-night.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
