@@ -8,12 +8,15 @@
 
 #import "ViewController.h"
 
+
 @interface ViewController ()
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (nonatomic) UIImageView *fieldLighthouse;
 @property (nonatomic) UIImageView *nightLighthouse;
 @property (nonatomic) UIImageView *plainLighthouse;
+@property (weak, nonatomic) IBOutlet UIPageControl *pageControl;
+
 
 @end
 
@@ -23,10 +26,37 @@
        [super viewDidLoad];
        // Do any additional setup after loading the view, typically from a nib.
 }
-- (IBAction)zoomIn:(id)sender {
+
+
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    int imageNumber = self.scrollView.contentOffset.x/self.scrollView.frame.size.width;
+    self.pageControl.currentPage = imageNumber;
+}
+
+- (IBAction)zoomIn:(UITapGestureRecognizer *)sender {
     [self performSegueWithIdentifier:@"Zoom" sender:sender];
 }
 
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+     if ([[segue identifier] isEqualToString:@"Zoom"])
+    {
+        ViewControllerZoom *zoomView = [segue destinationViewController];
+        CGPoint viewLocation = [sender locationInView:self.scrollView];
+        int imageNumber = viewLocation.x/self.scrollView.frame.size.width;
+        if(imageNumber == 0){
+        zoomView.zoomedImage = self.fieldLighthouse.image;
+        }
+        else if(imageNumber == 1) {
+            zoomView.zoomedImage = self.nightLighthouse.image;
+        }
+        else {
+            zoomView.zoomedImage = self.plainLighthouse.image;
+        }
+
+    }
+}
 
 -(void)viewDidAppear:(BOOL)animated {
     self.scrollView.delegate = self;

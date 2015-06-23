@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ViewControllerZoom.h"
 
 @interface ViewController : UIViewController <UIScrollViewDelegate>
 

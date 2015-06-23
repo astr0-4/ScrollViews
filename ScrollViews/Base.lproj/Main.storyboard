@@ -16,6 +16,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="JJ1-cK-LKX">
+                                <rect key="frame" x="141" y="485" width="39" height="37"/>
+                                <connections>
+                                    <action selector="pageControl:" destination="vXZ-lx-hvc" eventType="valueChanged" id="cX6-dF-tTs"/>
+                                </connections>
+                            </pageControl>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="whp-kw-ri1">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <gestureRecognizers/>
@@ -25,24 +31,27 @@
                                 </connections>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="whp-kw-ri1" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="1nR-PG-VhI"/>
                             <constraint firstItem="whp-kw-ri1" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="4gN-12-QhW"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="JJ1-cK-LKX" secondAttribute="bottom" constant="46" id="R2A-Pn-ujk"/>
+                            <constraint firstAttribute="centerX" secondItem="JJ1-cK-LKX" secondAttribute="centerX" id="cRv-Aa-34R"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="whp-kw-ri1" secondAttribute="bottom" id="wLQ-wv-QxQ"/>
                             <constraint firstAttribute="trailing" secondItem="whp-kw-ri1" secondAttribute="trailing" id="xmD-4T-nEA"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="OPW-Ed-h6A"/>
                     <connections>
+                        <outlet property="pageControl" destination="JJ1-cK-LKX" id="6NU-xP-u7h"/>
                         <outlet property="scrollView" destination="whp-kw-ri1" id="Npz-Mn-mim"/>
+                        <segue destination="fCk-3G-8OY" kind="push" identifier="Zoom" id="Kpf-Ra-jU4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="kk8-Ri-KUY">
                     <connections>
                         <action selector="zoomIn:" destination="vXZ-lx-hvc" id="dbk-do-OlT"/>
-                        <segue destination="fCk-3G-8OY" kind="push" identifier="Zoom" id="PgL-Nj-K1K"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>

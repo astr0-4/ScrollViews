@@ -10,4 +10,6 @@
 
 @interface ViewControllerZoom : UIViewController<UIScrollViewDelegate>
 
+@property (nonatomic, strong) UIImage *zoomedImage;
+
 @end

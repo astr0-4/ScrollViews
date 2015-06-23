@@ -12,9 +12,7 @@
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
 
-@property (nonatomic) UIImageView *fieldLighthouse;
-@property (nonatomic) UIImageView *nightLighthouse;
-@property (nonatomic) UIImageView *plainLighthouse;
+@property (nonatomic) UIImageView *lighthouse;
 
 @end
 
@@ -28,29 +26,47 @@
 -(void)viewDidAppear:(BOOL)animated {
     self.scrollView.userInteractionEnabled = YES;
     self.scrollView.delegate = self;
-    self.fieldLighthouse = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Lighthouse-in-Field.jpg"]];
-    NSLog(@"view did appear");
     
-//    self.nightLighthouse = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Lighthouse-night.jpg"]];
-//    self.plainLighthouse = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Lighthouse.jpg"]];
-//    
-//    NSArray *lighthouses = @[self.fieldLighthouse];
-//    CGFloat xPosition = 0;
-//    
-//    for(UIImageView *lighthouse in lighthouses) {
-//        UIView *lighthouseView = [[UIView alloc] initWithFrame:(CGRect){xPosition,0,self.scrollView.frame.size.width, self.scrollView.frame.size.height}];
-//
-//        lighthouseView = lighthouse;
-//        
-        self.fieldLighthouse.frame = CGRectMake(0,0, self.scrollView.frame.size.width + 30, self.scrollView.frame.size.height + 30);
-//        lighthouse.contentMode = UIViewContentModeScaleAspectFit;
-//        xPosition += self.scrollView.frame.size.width;
-        [self.scrollView addSubview:self.fieldLighthouse];
+    self.lighthouse = [[UIImageView alloc] initWithImage:self.zoomedImage];
+    //put in 4 constraints to pin to top left bottom right scrollview
+    
+    [self.scrollView addSubview:self.lighthouse];
+    
+    [self.scrollView addConstraint:[NSLayoutConstraint constraintWithItem:self.lighthouse
+                                                          attribute:NSLayoutAttributeBottom
+                                                          relatedBy:NSLayoutRelationEqual
+                                                             toItem:self.scrollView
+                                                          attribute:NSLayoutAttributeBottom
+                                                         multiplier:1.0
+                                                           constant:0.0]];
+    
+    [self.scrollView addConstraint:[NSLayoutConstraint constraintWithItem:self.lighthouse
+                                                          attribute:NSLayoutAttributeLeft
+                                                          relatedBy:NSLayoutRelationEqual
+                                                             toItem:self.scrollView
+                                                          attribute:NSLayoutAttributeLeft
+                                                         multiplier:1.0
+                                                           constant:0.0]];
+    [self.scrollView addConstraint:[NSLayoutConstraint constraintWithItem:self.lighthouse
+                                                          attribute:NSLayoutAttributeRight
+                                                          relatedBy:NSLayoutRelationEqual
+                                                             toItem:self.scrollView
+                                                          attribute:NSLayoutAttributeRight
+                                                         multiplier:1.0
+                                                           constant:0.0]];
+    [self.scrollView addConstraint:[NSLayoutConstraint constraintWithItem:self.lighthouse
+                                                          attribute:NSLayoutAttributeTop
+                                                          relatedBy:NSLayoutRelationEqual
+                                                             toItem:self.scrollView
+                                                          attribute:NSLayoutAttributeTop
+                                                         multiplier:1.0
+                                                           constant:0.0]];
+    
     self.scrollView.maximumZoomScale = 5;
-    self.scrollView.minimumZoomScale = 1;
-
-    self.scrollView.contentSize = (CGSize){self.fieldLighthouse.frame.size.width, self.fieldLighthouse.frame.size.height};
+    self.scrollView.minimumZoomScale = 0.25;
+    
     [super viewDidAppear:YES];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -60,12 +76,9 @@
 }
 
 - (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView {
-    NSLog(@"view for zoom method called");
-    return self.fieldLighthouse;
+    return [self.scrollView.subviews firstObject];
 }
 
--(void)scrollViewDidScroll:(UIScrollView *)scrollView{
-    NSLog(@"scroll view did scroll");
-}
+
 
 @end
