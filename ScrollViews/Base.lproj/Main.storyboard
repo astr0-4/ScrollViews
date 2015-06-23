@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="fCk-3G-8OY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="on0-kB-Y8j">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
@@ -18,8 +18,10 @@
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="whp-kw-ri1">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <gestureRecognizers/>
                                 <connections>
                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="as7-cL-3mJ"/>
+                                    <outletCollection property="gestureRecognizers" destination="kk8-Ri-KUY" appends="YES" id="7k6-SF-1lz"/>
                                 </connections>
                             </scrollView>
                         </subviews>
@@ -31,13 +33,20 @@
                             <constraint firstAttribute="trailing" secondItem="whp-kw-ri1" secondAttribute="trailing" id="xmD-4T-nEA"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="OPW-Ed-h6A"/>
                     <connections>
                         <outlet property="scrollView" destination="whp-kw-ri1" id="Npz-Mn-mim"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="kk8-Ri-KUY">
+                    <connections>
+                        <action selector="zoomIn:" destination="vXZ-lx-hvc" id="dbk-do-OlT"/>
+                        <segue destination="fCk-3G-8OY" kind="push" identifier="Zoom" id="PgL-Nj-K1K"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="250" y="245"/>
+            <point key="canvasLocation" x="782" y="245"/>
         </scene>
         <!--View Controller Zoom-->
         <scene sceneID="q9Z-x2-kiA">
@@ -66,13 +75,32 @@
                             <constraint firstItem="Xrf-G4-hDZ" firstAttribute="leading" secondItem="0sY-hC-w5A" secondAttribute="leading" id="a5y-bh-Nf2"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="eOm-Rr-190"/>
                     <connections>
                         <outlet property="scrollView" destination="Xrf-G4-hDZ" id="e3I-kZ-Lgr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5jz-H7-L8N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="799" y="269"/>
+            <point key="canvasLocation" x="1192" y="245"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="soY-hZ-vQk">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="on0-kB-Y8j" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2zj-yf-0OO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="P3F-QW-Ao7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9F7-kl-JBA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="360" y="245"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

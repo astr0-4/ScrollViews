@@ -23,6 +23,10 @@
        [super viewDidLoad];
        // Do any additional setup after loading the view, typically from a nib.
 }
+- (IBAction)zoomIn:(id)sender {
+    [self performSegueWithIdentifier:@"Zoom" sender:sender];
+}
+
 
 -(void)viewDidAppear:(BOOL)animated {
     self.scrollView.delegate = self;

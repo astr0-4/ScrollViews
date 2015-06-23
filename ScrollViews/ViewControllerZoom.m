@@ -30,9 +30,21 @@
     self.scrollView.delegate = self;
     self.fieldLighthouse = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Lighthouse-in-Field.jpg"]];
     NSLog(@"view did appear");
-
+    
+//    self.nightLighthouse = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Lighthouse-night.jpg"]];
+//    self.plainLighthouse = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Lighthouse.jpg"]];
+//    
+//    NSArray *lighthouses = @[self.fieldLighthouse];
+//    CGFloat xPosition = 0;
+//    
+//    for(UIImageView *lighthouse in lighthouses) {
+//        UIView *lighthouseView = [[UIView alloc] initWithFrame:(CGRect){xPosition,0,self.scrollView.frame.size.width, self.scrollView.frame.size.height}];
+//
+//        lighthouseView = lighthouse;
+//        
         self.fieldLighthouse.frame = CGRectMake(0,0, self.scrollView.frame.size.width + 30, self.scrollView.frame.size.height + 30);
-
+//        lighthouse.contentMode = UIViewContentModeScaleAspectFit;
+//        xPosition += self.scrollView.frame.size.width;
         [self.scrollView addSubview:self.fieldLighthouse];
     self.scrollView.maximumZoomScale = 5;
     self.scrollView.minimumZoomScale = 1;
